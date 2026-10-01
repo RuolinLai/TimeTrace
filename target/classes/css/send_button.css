@@ -1,0 +1,27 @@
+.circle-arrow-button {
+    -fx-background-color: #4c4d82;
+    
+    -fx-text-fill: white;
+    
+
+    
+    -fx-min-width: 70px;
+    -fx-min-height: 70px;
+    -fx-max-width: 70px;
+    -fx-max-height: 70px;
+    
+    -fx-background-radius: 35px;
+    -fx-border-radius: 35px;
+    
+    -fx-alignment: center;
+    
+    -fx-cursor: hand;
+}
+
+.circle-arrow-button:hover {
+    -fx-background-color: #005A9E;
+}
+
+.circle-arrow-button:pressed {
+    -fx-background-color: #004578;
+}

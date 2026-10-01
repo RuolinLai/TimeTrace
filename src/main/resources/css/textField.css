@@ -1,0 +1,28 @@
+.text-field {
+-fx-background-color: #ffffff;
+-fx-background-radius: 8px;
+-fx-border-color: #d1d5db;
+-fx-border-radius: 8px;
+-fx-border-width: 1.5px;
+
+-fx-text-fill: #1f2937;
+
+-fx-padding: 8px 12px;
+
+-fx-prompt-text-fill: #9ca3af;
+
+
+}
+
+.text-field:hover {
+-fx-border-color: #93c5fd;
+-fx-background-color: #ffffff;
+}
+
+.text-field:focused {
+-fx-background-color: #ffffff;
+-fx-border-color: #4c4d82;
+-fx-border-radius: 8px;
+-fx-border-width: 2px;
+-fx-effect: dropshadow(three-pass-box, rgba(59, 130, 246, 0.25), 6, 0, 0, 0);
+}

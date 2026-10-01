@@ -1,0 +1,16 @@
+.anchor-pane {
+-fx-background-color: #f1f5f9;
+-fx-background-radius: 12px;
+}
+
+.anchor-pane.inset-card {
+-fx-background-color: #f8fafc;
+-fx-background-radius: 12px;
+
+-fx-border-color: #e2e8f0;
+-fx-border-radius: 12px;
+-fx-border-width: 15px;
+
+-fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.08), 6, 0, 0, 2);
+
+}

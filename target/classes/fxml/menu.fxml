@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimeTrace.menuController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="640.0" prefWidth="86.0" styleClass="body" stylesheets="@../css/blue.css">
+         <children>
+            <AnchorPane fx:id="home_button" onMouseClicked="#switchToHome" prefHeight="87.0" prefWidth="94.0">
+               <children>
+                  <Label layoutX="12.0" layoutY="30.0" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="Meiryo UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="1.0" fitWidth="73.0">
+               <image>
+                  <Image url="@../media/black_line.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="analysis_button" onMouseClicked="#switchToAnalysis" prefHeight="87.0" prefWidth="94.0">
+               <children>
+                  <Label layoutY="30.0" text="Analysis" textFill="WHITE">
+                     <font>
+                        <Font name="Meiryo UI Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="1.0" fitWidth="73.0">
+               <image>
+                  <Image url="@../media/black_line.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="setting_button" onMouseClicked="#switchToSetting" prefHeight="87.0" prefWidth="94.0">
+               <children>
+                  <Label layoutX="6.0" layoutY="30.0" text="Setting" textFill="WHITE">
+                     <font>
+                        <Font name="Meiryo UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="contentPane" layoutX="86.0" layoutY="-1.0" prefHeight="641.0" prefWidth="895.0" />
+   </children>
+</AnchorPane>

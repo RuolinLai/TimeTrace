@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="641.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimeTrace.taskDoneController">
+   <children>
+      <ScrollPane prefHeight="641.0" prefWidth="905.0" stylesheets="@../css/scrollPane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane prefHeight="1258.0" prefWidth="870.0" stylesheets="@../css/anchorPane.css">
+               <children>
+                  <Label alignment="CENTER_RIGHT" layoutX="737.0" layoutY="62.0" text="Done!" textFill="#9496d9">
+                     <font>
+                        <Font name="System" size="41.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="task_name_label" contentDisplay="CENTER" layoutX="50.0" layoutY="46.0" prefHeight="90.0" prefWidth="465.0" text="Task name" textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="62.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="141.0" prefHeight="396.0" prefWidth="797.0">
+                     <children>
+                        <Label fx:id="time_spent_label" prefHeight="58.0" prefWidth="837.0" text="Time spent:">
+                           <font>
+                              <Font name="System" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="expected_time_label" prefHeight="58.0" prefWidth="839.0" text="Expected time:">
+                           <font>
+                              <Font name="System" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="start_at_label" prefHeight="58.0" prefWidth="840.0" text="Started at:">
+                           <font>
+                              <Font name="System" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="total_distracted_time_label" prefHeight="58.0" prefWidth="835.0" text="Total distracted time:">
+                           <font>
+                              <Font name="System" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="times_of_distracted_label" prefHeight="58.0" prefWidth="841.0" text="Times of distracted:">
+                           <font>
+                              <Font name="System" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="focus_rate_label" prefHeight="58.0" prefWidth="840.0" text="Focus rate:">
+                           <font>
+                              <Font name="System" size="33.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <PieChart fx:id="time_distribution_piechart" layoutX="31.0" layoutY="552.0" prefHeight="515.0" prefWidth="829.0" stylesheets="@../css/piechart.css" />
+               </children>
+               <styleClass>
+                  <String fx:value="anchor-pane" />
+                  <String fx:value="inset-card" />
+               </styleClass>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

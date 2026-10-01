@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="879.0" styleClass="anchor-pane" stylesheets="@../css/anchorPane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimeTrace.settingController">
+   <children>
+      <Label contentDisplay="CENTER" layoutX="48.0" layoutY="106.0" prefHeight="86.0" prefWidth="390.0" text="Check-in interval: " textFill="#4c4d82">
+         <font>
+            <Font name="System" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="33.0" prefHeight="73.0" prefWidth="720.0" text="Setting （press enter to confirm)" textFill="#9496d9">
+         <font>
+            <Font name="System" size="41.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="7.0" layoutY="512.0" prefHeight="73.0" prefWidth="862.0" text="Input cannot be blank!" textFill="#de5656" visible="false">
+         <font>
+            <Font name="System" size="33.0" />
+         </font>
+      </Label>
+      <TextField fx:id="input_checkInterval" layoutX="493.0" layoutY="122.0" prefHeight="54.0" prefWidth="98.0" styleClass="text-field" stylesheets="@../css/textField.css">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label contentDisplay="CENTER" layoutX="609.0" layoutY="106.0" prefHeight="86.0" prefWidth="69.0" text="min" textFill="#4c4d82">
+         <font>
+            <Font name="System" size="32.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="48.0" layoutY="192.0" prefHeight="86.0" prefWidth="390.0" text="Sound effect volume: " textFill="#4c4d82">
+         <font>
+            <Font name="System" size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="input_volume" layoutX="493.0" layoutY="208.0" prefHeight="54.0" prefWidth="98.0" styleClass="text-field" stylesheets="@../css/textField.css">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label contentDisplay="CENTER" layoutX="609.0" layoutY="192.0" prefHeight="86.0" prefWidth="69.0" text="\%" textFill="#4c4d82">
+         <font>
+            <Font name="System" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="success_label" alignment="CENTER" layoutX="9.0" layoutY="512.0" prefHeight="73.0" prefWidth="862.0" text="Successfully saved!" textFill="#57de5f" visible="false">
+         <font>
+            <Font name="System" size="33.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

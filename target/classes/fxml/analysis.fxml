@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="641.0" prefWidth="895.0" styleClass="anchor-pane" stylesheets="@../css/anchorPane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimeTrace.analysisController">
+   <children>
+      <ScrollPane prefHeight="641.344517256007" prefWidth="895.4621561687644" stylesheets="@../css/scrollPane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane prefHeight="1678.0" prefWidth="879.0">
+               <children>
+                  <DatePicker fx:id="date_picker" layoutX="31.0" layoutY="37.0" prefHeight="37.0" prefWidth="296.0" stylesheets="@../css/datePicker.css" />
+                  <ScrollPane layoutX="31.0" layoutY="112.0" prefHeight="351.0" prefWidth="836.0" style="-fx-background-color: transparent;" stylesheets="@../css/scrollPane.css">
+                     <content>
+                        <GridPane fx:id="task_gridPane" alignment="CENTER" prefHeight="104.0" prefWidth="834.0" styleClass="grid-pane" stylesheets="@../css/gridPane.css">
+                          <columnConstraints>
+                            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="556.0672204773456" minWidth="0.0" prefWidth="185.38655641484556" />
+                            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="556.0672204773456" minWidth="0.0" prefWidth="312.84872141066944" />
+                              <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="320.2689235103512" minWidth="10.0" prefWidth="298.2016726382651" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="86.0" prefWidth="453.0" text="Task name" textFill="#4c4d82">
+                                 <font>
+                                    <Font name="System" size="37.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="86.0" prefWidth="453.0" text="Total distracted time" textFill="#4c4d82" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="86.0" prefWidth="453.0" text="Total time spent" textFill="#4c4d82" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="System" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <Label fx:id="focus_rate_label" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="408.0" layoutY="13.0" prefHeight="86.0" prefWidth="453.0" text="Overall focus rate: 0.99" textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="32.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="time_spent_piechart" layoutX="19.0" layoutY="1047.0" prefHeight="434.0" prefWidth="844.0" stylesheets="@../css/piechart.css" />
+                  <BarChart fx:id="distracted_times_barChart" layoutX="19.0" layoutY="511.0" prefHeight="388.0" prefWidth="846.0" stylesheets="@../css/barchart.css">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" tickLabelGap="0.0" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <Label fx:id="longest_distracted_task_label" alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="929.0" prefHeight="86.0" prefWidth="840.0" text="You get distracted the longest when you're doing " textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="1548.0" prefHeight="86.0" prefWidth="689.0" text="Wanna further discussed about your time management?" textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="aichat_button" layoutX="730.0" layoutY="1556.0" mnemonicParsing="false" onMouseClicked="#switchToAIchat" prefHeight="69.0" prefWidth="125.0" stylesheets="@../css/button.css" text="Ask AI">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

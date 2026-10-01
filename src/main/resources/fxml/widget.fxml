@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<Group fx:id="zoomRoot" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimeTrace.widgetController">
+   <children>
+      <AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" styleClass="anchor-pane" stylesheets="@../css/anchorPane.css">
+         <children>
+            <Group fx:id="reminder_group" layoutX="16.0" layoutY="6.0" visible="false">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="193.0" prefWidth="268.0" text="Are you still working?" textFill="#4c4d82" wrapText="true">
+                     <font>
+                        <Font name="System" size="44.0" />
+                     </font>
+                  </Label>
+                  <Rectangle fx:id="yes_button" arcHeight="5.0" arcWidth="5.0" fill="#c2ffd3" height="43.0" layoutX="56.0" layoutY="183.0" onMouseClicked="#yes" stroke="#7177ab" strokeType="INSIDE" width="164.0" />
+                  <Rectangle fx:id="no_button" arcHeight="5.0" arcWidth="5.0" fill="#ff9797" height="43.0" layoutX="56.0" layoutY="235.0" onMouseClicked="#no" stroke="#7177ab" strokeType="INSIDE" width="164.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="222.0" mouseTransparent="true" prefHeight="66.0" prefWidth="112.0" text="No..." textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="33.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="171.0" mouseTransparent="true" prefHeight="66.0" prefWidth="112.0" text="Yes!" textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <Group fx:id="stop_watch_group" layoutX="4.0" layoutY="18.0">
+               <children>
+                  <Label fx:id="task_name_label" alignment="CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="288.0" text="Task name" textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="33.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stop_watch_label" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="55.0" prefHeight="66.0" prefWidth="288.0" text="10 h 88 min 88s" textFill="#1c1c1e">
+                     <font>
+                        <Font name="System" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="start_time_label" alignment="CENTER" layoutY="121.0" prefHeight="52.0" prefWidth="289.0" text="start at: 99:99" textFill="#9496d9">
+                     <font>
+                        <Font name="System" size="30.0" />
+                     </font>
+                  </Label>
+                  <Rectangle fx:id="mark_button" arcHeight="5.0" arcWidth="5.0" fill="#c0e1ff" height="43.0" layoutX="62.0" layoutY="173.0" onMouseClicked="#mark" stroke="#7177ab" strokeType="INSIDE" width="164.0" />
+                  <Rectangle fx:id="done_button" arcHeight="5.0" arcWidth="5.0" fill="#c2ffd3" height="43.0" layoutX="62.0" layoutY="225.0" onMouseClicked="#taskDone" stroke="#7177ab" strokeType="INSIDE" width="164.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="212.0" mouseTransparent="true" prefHeight="66.0" prefWidth="112.0" text="Done" textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="33.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="161.0" mouseTransparent="true" prefHeight="66.0" prefWidth="112.0" text="Mark" textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <Group fx:id="distracted_group" layoutX="7.0" layoutY="28.0" visible="false">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="288.0" text="Not working" textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="33.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="distracted_stop_watch_label" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="55.0" prefHeight="66.0" prefWidth="288.0" text="10 h 88 min 88s" textFill="#f00000">
+                     <font>
+                        <Font name="System" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="distracted_start_time_label" alignment="CENTER" layoutX="-1.0" layoutY="121.0" prefHeight="52.0" prefWidth="286.0" text="start at: 99:99" textFill="#f1a08a">
+                     <font>
+                        <Font name="System" size="30.0" />
+                     </font>
+                  </Label>
+                  <Rectangle fx:id="return_to_work_button" arcHeight="5.0" arcWidth="5.0" fill="#c0e1ff" height="43.0" layoutX="43.0" layoutY="193.0" onMouseClicked="#return_to_work" stroke="#7177ab" strokeType="INSIDE" width="209.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="180.0" mouseTransparent="true" prefHeight="66.0" prefWidth="221.0" text="return to work" textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <Group fx:id="what_happened_group" layoutX="14.0" layoutY="-10.0" visible="false">
+               <children>
+                  <Rectangle fx:id="confirm_button" arcHeight="5.0" arcWidth="5.0" fill="#c2ffd3" height="43.0" layoutX="53.0" layoutY="224.0" onMouseClicked="#confirm" stroke="#7177ab" strokeType="INSIDE" width="164.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="213.0" mouseTransparent="true" prefHeight="66.0" prefWidth="129.0" text="confirm" textFill="#4c4d82">
+                     <font>
+                        <Font name="System" size="33.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="choice_combobox" layoutX="60.0" layoutY="154.0" prefWidth="150.0" promptText="( •́ _ •̀)？" stylesheets="@../css/combobox.css" />
+                  <Label fx:id="task_name_label11" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="63.0" prefHeight="74.0" prefWidth="268.0" text="What happened?" textFill="#4c4d82" wrapText="true">
+                     <font>
+                        <Font name="System" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

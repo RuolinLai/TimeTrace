@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="637.0" prefWidth="895.0" styleClass="anchor-pane" stylesheets="@../css/anchorPane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimeTrace.homeController">
+   <children>
+      <Button fx:id="start_button" layoutX="352.0" layoutY="518.0" mnemonicParsing="false" onMouseClicked="#handleStartButton" prefHeight="55.0" prefWidth="179.0" stylesheets="@../css/button.css" text="Start to Work!">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <fx:include fx:id="timeBarContainer" source="time_bar.fxml" />
+      <Label layoutX="38.0" layoutY="23.0" text="Home" textFill="#9496d9">
+         <font>
+            <Font name="System" size="41.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="94.0" layoutY="152.0" prefHeight="332.0" prefWidth="696.0" style="-fx-background-color: transparent;" stylesheets="@../css/scrollPane.css">
+         <content>
+            <GridPane fx:id="task_gridPane" prefHeight="316.0" prefWidth="694.0" styleClass="grid-pane" stylesheets="@../css/gridPane.css">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.5966110568914" minWidth="10.0" prefWidth="192.38656304807103" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.8571223702173" minWidth="10.0" prefWidth="278.70585895347364" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.4790142914071" minWidth="10.0" prefWidth="180.3781842132821" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="86.0" prefWidth="453.0" text="Task name" textFill="#4c4d82">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="127.0" prefWidth="277.0" text="Total time spent" textFill="#4c4d82" wrapText="true" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="86.0" prefWidth="453.0" text="Focus rate" textFill="#4c4d82" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" layoutX="254.0" layoutY="77.0" prefHeight="73.0" prefWidth="376.0" text="Today's work" textFill="#628be4">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

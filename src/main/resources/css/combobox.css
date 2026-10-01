@@ -1,0 +1,27 @@
+.combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 3px;
+}
+
+.combo-box:hover {
+    -fx-border-color: #409eff;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 4px;
+}
+
+.combo-box-popup .list-cell {
+    -fx-padding: 8px 12px;
+    -fx-text-fill: #333333;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #f5f7fa;
+    -fx-text-fill: #333333;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="641.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimeTrace.AIchatController">
+   <children>
+      <BorderPane stylesheets="@../css/anchorPane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <ScrollPane fx:id="scrollPane" fitToWidth="true" prefHeight="580.0" prefWidth="895.0" stylesheets="@../css/scrollPane.css">
+               <content>
+                  <VBox fx:id="chatContainer" spacing="10.0" style="-fx-padding: 15px;" />
+               </content>
+            </ScrollPane>
+         </center>
+         <bottom>
+            <HBox prefHeight="84.0" prefWidth="895.0" spacing="10.0" style="-fx-padding: 10px;">
+               <children>
+                  <TextField fx:id="inputField" prefHeight="65.0" prefWidth="788.0" promptText="Ask anything">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <Button fx:id="sendButton" maxHeight="56.0" maxWidth="62.0" minWidth="24.0" onAction="#handleSendMessage" prefHeight="56.0" prefWidth="62.0" styleClass="circle-arrow-button" stylesheets="@../css/send_button.css" text="send">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </bottom>
+         <styleClass>
+            <String fx:value="anchor-pane" />
+            <String fx:value="inset-card" />
+         </styleClass>
+      </BorderPane>
+   </children>
+</AnchorPane>

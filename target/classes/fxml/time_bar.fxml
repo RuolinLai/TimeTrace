@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox fx:id="timebar_Hbox" prefHeight="39.0" prefWidth="759.0" styleClass="time-bar" stylesheets="@../css/time_bar.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimeTrace.timeBarController" />

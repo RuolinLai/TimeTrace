@@ -1,0 +1,17 @@
+.time-bar {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 0;
+}
+
+.time-segment-first {
+    -fx-background-radius: 8px 0px 0px 8px;
+}
+
+.time-segment-last {
+    -fx-background-radius: 0px 8px 8px 0px;
+}
+
+.time-segment-only-one {
+    -fx-background-radius: 8px 8px 8px 8px;
+}
